@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "893116581309",
+    "firebase_url": "https://rdc-lnmiit.firebaseio.com",
+    "project_id": "rdc-lnmiit",
+    "storage_bucket": "rdc-lnmiit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893116581309:android:ce3e9d9eafcbab4a",
+        "android_client_info": {
+          "package_name": "com.example.rdc_lnmiit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893116581309-ngg8f8fcnof4agkgh89snt6jtu01o6c4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rdc_lnmiit",
+            "certificate_hash": "ea13fff4505307593e16d7c4c2db18858c6b3e20"
+          }
+        },
+        {
+          "client_id": "893116581309-q5vr14gdetomuksqo8tu1rld56imtnlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrKK3W43KlmM_Cn0jZjXYVif510nmv7q0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893116581309-q5vr14gdetomuksqo8tu1rld56imtnlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
