@@ -2,14 +2,14 @@ package com.example.rdc_lnmiit;
 
 public class Data {
 
-    String id, scheme, year, motive, bene, mile, rg_value;
+    String /*id, */ scheme, year, motive, bene, mile, rg_value;
 
     public Data(){
 
     }
 
-    public Data(String id, String scheme, String year, String motive, String bene, String mile, String rg_value) {
-        this.id = id;
+    public Data(/*String id, */ String scheme, String year, String motive, String bene, String mile, String rg_value) {
+        //this.id = id;
         this.scheme = scheme;
         this.year = year;
         this.motive = motive;
@@ -18,9 +18,9 @@ public class Data {
         this.rg_value = rg_value;
     }
 
-    public String getId() {
+    /*public String getId() {
         return id;
-    }
+    }*/
 
     public String getScheme() {
         return scheme;

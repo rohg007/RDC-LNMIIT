@@ -13,9 +13,29 @@
         android:padding="10dp">
 
         <TextView
+            android:id="@+id/category_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Category:"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/category_textView"
+            android:background="@drawable/text_bg"
+            android:entries="@array/Categories"></Spinner>
+
+        <TextView
             android:id="@+id/gov_scheme_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/category_spinner"
+            android:layout_marginTop="20dp"
             android:text="Government Scheme:"
             android:textColor="@color/text"
             android:textSize="20sp"
@@ -57,7 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/year_editText"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:text="Motive:"
             android:textColor="@color/text"
             android:textSize="20sp"
@@ -76,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/motive_editText"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:text="Beneficiaries:"
             android:textColor="@color/text"
             android:textSize="20sp"
@@ -137,7 +157,7 @@
         <EditText
             android:id="@+id/mile_editText"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/mile_textView"
             android:background="@drawable/text_bg"
             android:hint="If Any"

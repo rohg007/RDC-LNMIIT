@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">RDC-LNMIIT</string>
+
+    <array name="Categories">
+
+        <item>Ministry of housing and urban poverty alleviation</item>
+        <item>Ministry of finance</item>
+        <item>Ministry of human resource and development</item>
+        <item>Ministry of rural development</item>
+        <item>Ministry of urban development</item>
+        <item>Ministry of social justice and empowerment</item>
+        <item>Ministry of women and child development</item>
+        <item>Ministry of health and family welfare</item>
+        <item>Ministry of agriculture and farmers welfare</item>
+        <item>Ministry of power</item>
+        <item>Ministry of commerce</item>
+        <item>Ministry of skill development and entrepreneurship</item>
+        <item>Ministry of water resources, river development and ganga rejuvenation</item>
+        <item>Ministry of labour and employment</item>
+        <item>Ministry of electronics and IT</item>
+        <item>Ministry of road transport and waterways</item>
+        <item>Miscellaneous schemes</item>
+
+    </array>
 </resources>
