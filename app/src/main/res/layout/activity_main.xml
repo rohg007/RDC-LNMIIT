@@ -124,11 +124,22 @@
                 android:paddingRight="6dp"
                 android:paddingBottom="4dp" />
 
+            <TextView
+                android:id="@+id/juri_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bene_editText"
+                android:layout_marginTop="20dp"
+                android:text="Jurisdiction:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/bene_editText"
+                android:layout_below="@+id/juri_textView"
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal"
                 android:weightSum="2">

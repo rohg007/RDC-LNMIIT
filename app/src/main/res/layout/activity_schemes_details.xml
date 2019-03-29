@@ -41,7 +41,7 @@
 
                     <TextView
                         android:id="@+id/year"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="6dp"
@@ -82,7 +82,7 @@
 
                     <TextView
                         android:id="@+id/centralorstate"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/a"
                         android:background="#424242"
@@ -121,7 +121,7 @@
 
                     <TextView
                         android:id="@+id/bene"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/b"
                         android:background="#424242"
@@ -160,7 +160,7 @@
 
                     <TextView
                         android:id="@+id/motive"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/c"
                         android:background="#424242"
@@ -199,7 +199,7 @@
 
                     <TextView
                         android:id="@+id/mile"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/d"
                         android:background="#424242"
