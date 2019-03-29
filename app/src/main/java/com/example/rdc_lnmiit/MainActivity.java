@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         Data data = new Data(/*id, */scheme, year, motive, bene, mile, rg_value);
 
-        databaseReference1.child(category).push().setValue(categoryModel);
+        //databaseReference1.child(category).push().setValue(categoryModel);
         databaseReference1.child(category).child(scheme).setValue(data);
 
         Toast.makeText(this, "Data Added", Toast.LENGTH_SHORT).show();
