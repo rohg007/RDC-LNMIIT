@@ -1,5 +1,7 @@
 package com.example.rdc_lnmiit;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,9 +14,11 @@ import java.util.ArrayList;
 public class MyAdpater extends RecyclerView.Adapter<MyAdpater.ViewHolder> {
 
     ArrayList<String> categories;
+    private Context context;
 
-    public MyAdpater(ArrayList<String> categories) {
+    public MyAdpater(ArrayList<String> categories, Context context) {
         this.categories = categories;
+        this.context = context;
     }
 
     @NonNull
@@ -25,8 +29,17 @@ public class MyAdpater extends RecyclerView.Adapter<MyAdpater.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdpater.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final MyAdpater.ViewHolder viewHolder, final int i) {
         viewHolder.category.setText(categories.get(i));
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, SchemesActivity.class);
+                intent.putExtra("categorySelected", categories.get(i).toString());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

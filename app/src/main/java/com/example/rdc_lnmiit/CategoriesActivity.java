@@ -25,6 +25,8 @@ public class CategoriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
 
+        getSupportActionBar().setTitle("Select Categories");
+
        /* mDatabase = FirebaseDatabase.getInstance().getReference().child("Data");
         mDatabase.keepSynced(true);*/
        categories = new ArrayList<String>();
@@ -51,7 +53,7 @@ public class CategoriesActivity extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setItemAnimator(new DefaultItemAnimator());
 
-        adapter = new MyAdpater(categories);
+        adapter = new MyAdpater(categories, this);
         rv.setAdapter(adapter);
 
     }

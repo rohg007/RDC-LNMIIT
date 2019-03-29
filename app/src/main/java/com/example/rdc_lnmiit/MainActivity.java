@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setTitle("Add Data");
+
         FirebaseApp.initializeApp(this);
 
         databaseReference1 = FirebaseDatabase.getInstance().getReference("Data");
@@ -51,7 +53,12 @@ public class MainActivity extends AppCompatActivity {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addData();
+
+                if(radioGroup.getCheckedRadioButtonId() != -1)
+                    addData();
+
+                else
+                    Toast.makeText(MainActivity.this, "Please select Central or State", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -73,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         Data data = new Data(/*id, */scheme, year, motive, bene, mile, rg_value);
 
-        databaseReference1.child(/*id*/category).push().setValue(categoryModel);
+        databaseReference1.child(category).push().setValue(categoryModel);
         databaseReference1.child(category).child(scheme).setValue(data);
 
         Toast.makeText(this, "Data Added", Toast.LENGTH_SHORT).show();
