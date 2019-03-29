@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.show_data_menu:
                 Intent intent = new Intent(this, CategoriesActivity.class);
                 startActivity(intent);
+                finish();
         }
 
         return super.onOptionsItemSelected(item);

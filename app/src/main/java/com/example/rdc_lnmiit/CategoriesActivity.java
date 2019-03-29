@@ -88,6 +88,7 @@ public class CategoriesActivity extends AppCompatActivity {
             case R.id.add_data_menu :
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                finish();
         }
 
         return super.onOptionsItemSelected(item);
