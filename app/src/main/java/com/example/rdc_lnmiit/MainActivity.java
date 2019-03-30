@@ -3,6 +3,7 @@ package com.example.rdc_lnmiit;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     addData();
 
                 else
-                    Toast.makeText(MainActivity.this, "Please select Central or State", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Please select Jurisdiction", Toast.LENGTH_SHORT).show();
             }
         });
     }

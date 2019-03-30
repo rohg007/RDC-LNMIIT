@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#303030">
+    android:background="@color/cards">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -14,7 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#303030"
+            android:background="@color/cards"
             android:padding="10dp">
 
             <TextView
@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="Category:"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
                 android:layout_below="@+id/category_textView"
                 android:background="@drawable/text_bg"
                 android:entries="@array/Categories"
-                android:popupBackground="#303030"
+                android:popupBackground="@color/background"
                 android:popupTheme="@style/mySpinnerItemStyle"></Spinner>
 
             <TextView
@@ -44,7 +44,7 @@
                 android:layout_below="@+id/category_spinner"
                 android:layout_marginTop="20dp"
                 android:text="Government Scheme:"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -64,7 +64,7 @@
                 android:layout_below="@+id/gov_scheme_editText"
                 android:layout_marginTop="25dp"
                 android:text="Year Initiated:"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -86,7 +86,7 @@
                 android:layout_below="@+id/year_editText"
                 android:layout_marginTop="20dp"
                 android:text="Motive:"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -107,7 +107,7 @@
                 android:layout_below="@+id/motive_editText"
                 android:layout_marginTop="20dp"
                 android:text="Beneficiaries:"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -131,7 +131,7 @@
                 android:layout_below="@+id/bene_editText"
                 android:layout_marginTop="20dp"
                 android:text="Jurisdiction:"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Central Government"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text"
                     android:textSize="17sp" />
 
                 <RadioButton
@@ -159,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="State Government"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text"
                     android:textSize="17sp" />
 
             </RadioGroup>
@@ -171,7 +171,7 @@
                 android:layout_below="@+id/radio_group"
                 android:layout_marginTop="15dp"
                 android:text="Milestones Achieved:"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

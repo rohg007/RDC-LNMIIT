@@ -1,22 +1,14 @@
 package com.example.rdc_lnmiit;
 
-import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,16 +18,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter;
-import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SchemesActivity extends AppCompatActivity {
 
     RecyclerView recycler_scheme;
     DatabaseReference databaseRef, databaseRefDialog;
+    ProgressBar progressBar;
+    TextView loading;
     String categorySelected;
     ArrayList<Data> data_list;
 
@@ -45,6 +36,9 @@ public class SchemesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_schemes);
 
         getSupportActionBar().setTitle("Select Schemes");
+
+        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        loading = (TextView) findViewById(R.id.loading);
 
         data_list = new ArrayList<>();
 
@@ -59,7 +53,6 @@ public class SchemesActivity extends AppCompatActivity {
 
         databaseRefDialog = FirebaseDatabase.getInstance().getReference("/Data/" + categorySelected/* + "/" + schemeName*/);
         databaseRefDialog.keepSynced(true);
-
 
     }
 
@@ -84,12 +77,17 @@ public class SchemesActivity extends AppCompatActivity {
             }
         });
 
+
+
        FirebaseRecyclerAdapter<Data, Holder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Data, Holder>
                 (Data.class, R.layout.scheme_list, Holder.class, databaseRef) {
             @Override
             protected void populateViewHolder(final Holder holder, Data model, final int position) {
 
                 holder.scheme_name.setText(model.getScheme());
+
+                progressBar.setVisibility(View.GONE);
+                loading.setVisibility(View.GONE);
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -109,7 +107,7 @@ public class SchemesActivity extends AppCompatActivity {
        recycler_scheme.setAdapter(firebaseRecyclerAdapter);
     }
 
-    public void showDialog(Data d){
+    /*public void showDialog(Data d){
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         Fragment prev = getSupportFragmentManager().findFragmentByTag("dialog");
@@ -128,6 +126,6 @@ public class SchemesActivity extends AppCompatActivity {
 
         dialogFragment.show(ft, "dialog");
 
-    }
+    }*/
 
 }
