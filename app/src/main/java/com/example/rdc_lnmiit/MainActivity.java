@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatDelegate;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(radioGroup.getCheckedRadioButtonId() != -1)
+                if (radioGroup.getCheckedRadioButtonId() != -1)
                     addData();
 
                 else
@@ -64,20 +65,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void addData(){
+    private void addData() {
         String category = category_spinner.getSelectedItem().toString();
         String scheme = gov_scheme_editText.getText().toString();
         String year = year_editText.getText().toString();
         String motive = motive_editText.getText().toString();
         String bene = bene_editText.getText().toString();
         String mile = mile_editText.getText().toString();
-        String rg_value = ((RadioButton)findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
+        String rg_value = ((RadioButton) findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
 
-       // String id = databaseReference.push().getKey();
+        // String id = databaseReference.push().getKey();
 
         CategoryModel categoryModel = new CategoryModel(category);
 
-       // databaseReference2 = FirebaseDatabase.getInstance().getReference(category);
+        // databaseReference2 = FirebaseDatabase.getInstance().getReference(category);
 
         Data data = new Data(/*id, */scheme, year, motive, bene, mile, rg_value);
 
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.show_data_menu:
                 Intent intent = new Intent(this, CategoriesActivity.class);
                 startActivity(intent);
