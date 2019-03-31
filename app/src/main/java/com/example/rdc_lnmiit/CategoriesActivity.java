@@ -1,6 +1,9 @@
 package com.example.rdc_lnmiit;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -8,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 
@@ -27,9 +31,9 @@ public class CategoriesActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Select Categories");
 
-       /* mDatabase = FirebaseDatabase.getInstance().getReference().child("Data");
-        mDatabase.keepSynced(true);*/
-       categories = new ArrayList<String>();
+        connected();
+
+        categories = new ArrayList<String>();
         categories.add("Ministry of housing and urban poverty alleviation");
         categories.add("Ministry of finance");
         categories.add("Ministry of human resource and development");
@@ -59,22 +63,6 @@ public class CategoriesActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-
-       /* FirebaseRecyclerAdapter<CategoryModel, Holder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<CategoryModel, Holder>
-                (CategoryModel.class, R.layout.card_view, Holder.class, mDatabase) {
-            @Override
-            protected void populateViewHolder(Holder holder, CategoryModel model, int position) {
-
-                holder.txtCategory.setText(model.getCategory());
-            }
-        };
-
-        rv.setAdapter(firebaseRecyclerAdapter);*/
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.menu1, menu);
@@ -92,5 +80,19 @@ public class CategoriesActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void connected(){
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo networkInfo = cm.getActiveNetworkInfo();
+
+        if(networkInfo != null && networkInfo.isConnected()){
+            Toast.makeText(this, "ONLINE", Toast.LENGTH_SHORT).show();
+        }
+
+        else{
+            Toast.makeText(this, "OFFLINE", Toast.LENGTH_SHORT).show();
+        }
     }
 }

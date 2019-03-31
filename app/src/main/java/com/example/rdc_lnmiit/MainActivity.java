@@ -1,6 +1,9 @@
 package com.example.rdc_lnmiit;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
@@ -55,12 +58,25 @@ public class MainActivity extends AppCompatActivity {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
-                if (radioGroup.getCheckedRadioButtonId() != -1)
-                    addData();
+                NetworkInfo networkInfo = cm.getActiveNetworkInfo();
 
-                else
-                    Toast.makeText(MainActivity.this, "Please select Jurisdiction", Toast.LENGTH_SHORT).show();
+                if(networkInfo != null && networkInfo.isConnected()){
+
+                    if (radioGroup.getCheckedRadioButtonId() != -1)
+                        addData();
+
+                    else
+                        Toast.makeText(MainActivity.this, "Please select Jurisdiction", Toast.LENGTH_SHORT).show();
+
+                }
+
+                else{
+                    Toast.makeText(getApplicationContext(), "No Internet", Toast.LENGTH_SHORT).show();
+                }
+
+
             }
         });
     }
