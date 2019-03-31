@@ -7,9 +7,18 @@
     tools:context=".MainActivity"
     android:background="@color/cards">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.v7.widget.Toolbar>
+
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar">
 
         <RelativeLayout
             android:layout_width="match_parent"
