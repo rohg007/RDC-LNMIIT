@@ -1,14 +1,20 @@
 package com.example.rdc_lnmiit;
 
 import android.content.Intent;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
@@ -25,7 +31,23 @@ public class CategoriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
 
-        getSupportActionBar().setTitle("Select Categories");
+        //getSupportActionBar().setTitle("Select Categories");
+        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.category_collapsing_toolbar);
+        collapsingToolbarLayout.setTitle("Select Category");
+        setSupportActionBar((Toolbar) findViewById(R.id.category_toolbar));
+
+        ImageView imageView = findViewById(R.id.category_logo_image_view);
+
+        Glide.with(this).load(R.drawable.rdc_logo).placeholder(R.drawable.placeholder).into(imageView);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoriesActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
        /* mDatabase = FirebaseDatabase.getInstance().getReference().child("Data");
         mDatabase.keepSynced(true);*/

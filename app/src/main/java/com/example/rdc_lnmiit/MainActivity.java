@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("Add Data");
+        //getSupportActionBar().setTitle("Add Data");
 
         FirebaseApp.initializeApp(this);
 

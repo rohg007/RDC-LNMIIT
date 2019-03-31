@@ -44,7 +44,7 @@ public class SchemesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schemes);
 
-        getSupportActionBar().setTitle("Select Schemes");
+        //getSupportActionBar().setTitle("Select Schemes");
 
         data_list = new ArrayList<>();
 
