@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="LNMIIT"
+        android:layout_above="@+id/a"
+        android:textColor="@color/text"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="RDC"
+        android:fontFamily="@font/overpass_semi_bold"
+        android:textColor="@color/text"
+        android:textSize="60sp"
+        android:id="@+id/a"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Rural Development Cell"
+        android:fontFamily="@font/overpass_light"
+        android:textColor="@color/text"
+        android:layout_below="@+id/a"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>

@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#212121</color>
-    <color name="colorPrimaryDark">#000000</color>
+   <!-- <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color> -->
     <color name="colorAccent">#D81B60</color>
 
-    <color name="background">#413043</color>
-    <color name="editText">#F6EEE3</color>
-    <color name="text">#D1CEBE</color>
+    <!--<color name="colorPrimary">#C3BAAC</color>
+    <color name="colorPrimaryDark">#B0A89C</color>-->
+
+    <color name="colorPrimary">#141D26</color>
+    <color name="colorPrimaryDark">#000000</color>
+
+   <!-- <color name="statusBar">#000000</color>
+    <color name="appBar">#212121</color>
+    <color name="background">#303030</color>
+    <color name="cards">#424242</color>
+    <color name="text">#FFFFFF</color> -->
+
+    <!--<color name="statusBar">#243033</color>
+    <color name="appBar">#3D4A4D</color>
+    <color name="background">#EDECE8</color>
+    <color name="cards">#FFFFFF</color>
+    <color name="text">#000000</color>-->
+
+    <color name="statusBar">#243033</color>
+    <color name="appBar">#3D4A4D</color>
+    <color name="background">#141D26</color>
+    <color name="cards">#243447</color>
+    <color name="text">#FFFFFF</color>
 </resources>
